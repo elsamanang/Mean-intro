@@ -7,15 +7,19 @@
       name="title"
       ngModel
       required
-      minlength="7">
+      minlength="7"
+      #title="ngModel">
+      <mat-error *ngIf="title.invalid">svp taper un titre avec un minimum de 7 caractere</mat-error>
     </mat-form-field>
     <mat-form-field>
       <textarea
       matInput
       rows="4"
-      name="conetent"
+      name="content"
       ngModel
-      required></textarea>
+      required
+      #content="ngModel"></textarea><br>
+      <mat-error *ngIf="content.invalid">svp taper un texte</mat-error>
     </mat-form-field>
     <button
     mat-raised-button

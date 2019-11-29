@@ -1,31 +1,32 @@
-<mat-card>
-  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
-    <mat-form-field>
-      <input
-      matInput
-      type="text"
-      name="title"
-      ngModel
-      required
-      minlength="7"
-      #title="ngModel">
-      <mat-error *ngIf="title.invalid">svp taper un titre avec un minimum de 7 caractere</mat-error>
-    </mat-form-field>
-    <mat-form-field>
+
+<form (submit)="onAddPost(postForm)" #postForm ="ngForm">
+   <mat-form-field>
+    <input
+    matInput
+    type="text"
+    name="title"
+    ngModel
+    required
+    minlength="7"
+    #title ="ngModel">
+    <mat-error *ngIf="title.invalid">Please enter a post title.</mat-error>
+  </mat-form-field>
+  <mat-form-field>
       <textarea
-      matInput
-      rows="4"
-      name="content"
-      ngModel
-      required
-      #content="ngModel"></textarea><br>
-      <mat-error *ngIf="content.invalid">svp taper un texte</mat-error>
-    </mat-form-field>
-    <button
-    mat-raised-button
-    color="accent"
-    type="submit">Post</button>
-  </form>
+       matInput
+       rows="4"
+       name="content"
+       ngModel
+       required
+       #content = "ngModel"></textarea>
+       <mat-error *ngIf="content.invalid">Please enter a post content.</mat-error>
+  </mat-form-field>
+      <button
+      mat-raised-button
+      color="accent"
+      type="submit">Post</button>
+</form>
+
 
 </mat-card>
 

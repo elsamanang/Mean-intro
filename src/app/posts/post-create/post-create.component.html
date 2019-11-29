@@ -5,14 +5,17 @@
     matInput
     type="text"
     name="title"
-    ngModel>
+    ngModel
+    required
+    minlength="7">
   </mat-form-field>
   <mat-form-field>
       <textarea
        matInput
        rows="4"
        name="content"
-       ngModel></textarea>
+       ngModel
+       required></textarea>
   </mat-form-field>
       <button
       mat-raised-button

@@ -14,10 +14,10 @@ export class PostCreateComponent {
   enteredContent = '';
   @Output() postCreated  = new EventEmitter<Post>();
 
-    onAddPost(from: NgForm) {
+    onAddPost(form: NgForm) {
       const post: Post = {
-        title: this.enteredTitle,
-        content: this.enteredContent
+        title: form.value.title,
+        content: form.value.content
       };
       this.postCreated.emit(post);
   }

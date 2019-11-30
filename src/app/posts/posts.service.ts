@@ -3,7 +3,7 @@ import { Post } from './post.model';
 export class PostsService {
   private posts: Post[] = [];
 
-  getPosts(){
+  getPosts() {
     return this.posts;
   }
 }
